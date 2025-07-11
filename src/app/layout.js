@@ -7,7 +7,7 @@ import {
   SignedOut,
   UserButton,
 } from '@clerk/nextjs'
-import {dark} from '@clerk/themes'
+import { dark } from '@clerk/themes'
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
@@ -30,9 +30,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider
-    appearance={{
-      baseTheme:dark
-    }}
+      appearance={{
+        baseTheme: dark
+      }}
     >
       <html lang="en"
         suppressHydrationWarning={true}
