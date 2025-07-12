@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   SidebarGroup,
@@ -7,8 +8,24 @@ import {
   SidebarMenuItem,
 } from "../ui/sidebar";
 import { Button } from "../ui/button";
+import { toast } from "sonner";
+import { useSlideStore } from "@/store/useSlideStore";
+import { useRouter } from "next/navigation";
 
 const RecentOpen = ({ recentProjects }) => {
+  const router = useRouter();
+  const { setSlide } = useSlideStore();
+
+  const handleClick = (projectId, slides) => {
+    if (!projectId || !slides) {
+      toast.error("Project not found", {
+        description: "Please try again",
+      });
+      return;
+    }
+    setSlide(JSON.parse(JSON.stringify(slides)));
+    router.push(`/presentation/${projectId}`);
+  };
   return (
     recentProjects.length > 0 && (
       <div>
@@ -25,6 +42,7 @@ const RecentOpen = ({ recentProjects }) => {
                         className={`hover:bg-neutral-700`}
                       >
                         <Button
+                          onClick={() => handleClick()}
                           variant={"link"}
                           className={`text-xs items-center justify-start`}
                         >

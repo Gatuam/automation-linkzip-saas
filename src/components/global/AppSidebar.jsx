@@ -11,6 +11,7 @@ import NavMain from "./NavMain";
 import { Dna } from "lucide-react";
 import { data } from "@/lib/constant";
 import RecentOpen from "./RecentOpen";
+import NavFooter from "./NavFooter";
 
 const AppSidebar = ({ recentProjects, user, ...props }) => {
   return (
@@ -35,7 +36,9 @@ const AppSidebar = ({ recentProjects, user, ...props }) => {
           <NavMain items={data.navMain}></NavMain>
           <RecentOpen recentProjects={recentProjects}></RecentOpen>
         </SidebarContent>
-        <SidebarFooter />
+        <SidebarFooter>
+          <NavFooter prismaUser={user}></NavFooter>
+        </SidebarFooter>
       </Sidebar>
     </div>
   );

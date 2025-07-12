@@ -11,11 +11,13 @@ const layout = async ({ children }) => {
   if (!checkUser.user) {
     redirect("/sign-in");
   }
-   const recentProjects = recentProject.status === 200 ? recentProject.data : [];
+  const recentProjects = recentProject.status === 200 ? recentProject.data : [];
   return (
     <div>
       <SidebarProvider>
-        <AppSidebar user={checkUser.user} recentProjects={recentProjects} >{children}</AppSidebar>
+        <AppSidebar user={checkUser.user} recentProjects={recentProjects}>
+          {children}
+        </AppSidebar>
       </SidebarProvider>
     </div>
   );
