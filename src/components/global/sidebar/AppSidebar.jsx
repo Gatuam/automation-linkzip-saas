@@ -6,7 +6,7 @@ import {
   SidebarFooter,
   SidebarHeader,
   SidebarMenuButton,
-} from "../ui/sidebar";
+} from "../../ui/sidebar";
 import NavMain from "./NavMain";
 import { Dna } from "lucide-react";
 import { data } from "@/lib/constant";
@@ -21,7 +21,7 @@ const AppSidebar = ({ recentProjects, user, ...props }) => {
         collapsible="icon"
         {...props}
       >
-        <SidebarHeader className="pt-9 px-4">
+        <SidebarHeader className="pt-9 px-2">
           <SidebarMenuButton
             size="lg"
             className="data-[state=open] bg-[#8d8d8d11]"
@@ -32,7 +32,7 @@ const AppSidebar = ({ recentProjects, user, ...props }) => {
             <span className="text-primary text-xl font-semibold">LINK-ZIP</span>
           </SidebarMenuButton>
         </SidebarHeader>
-        <SidebarContent className="px-3 mt-10 gap-y-6 ">
+        <SidebarContent className=" mt-10 gap-y-6 ">
           <NavMain items={data.navMain}></NavMain>
           <RecentOpen recentProjects={recentProjects}></RecentOpen>
         </SidebarContent>

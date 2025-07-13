@@ -5,7 +5,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "../ui/sidebar";
+} from "../../ui/sidebar";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
@@ -15,7 +15,7 @@ const NavMain = ({ items }) => {
     <div>
       <SidebarGroup>
         <SidebarMenu>
-          {items.map((item, idx) => (
+          {items.map((item) => (
             <SidebarMenuItem key={item.title} className=" rounded-sm ">
               <SidebarMenuButton
                 asChild

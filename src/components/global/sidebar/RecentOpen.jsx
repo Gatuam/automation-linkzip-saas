@@ -6,8 +6,8 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "../ui/sidebar";
-import { Button } from "../ui/button";
+} from "../../ui/sidebar";
+import { Button } from "../../ui/button";
 import { toast } from "sonner";
 import { useSlideStore } from "@/store/useSlideStore";
 import { useRouter } from "next/navigation";

@@ -1,16 +1,20 @@
 "use client";
 import React, { useState } from "react";
-import { SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "../ui/sidebar";
+import {
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+} from "../../ui/sidebar";
 import { SignedIn, UserButton, useUser } from "@clerk/nextjs";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 
 const NavFooter = ({ prismaUser }) => {
   const { isLoaded, isSignedIn, user } = useUser();
   const [loading, setLoading] = useState(false);
   return (
     <SidebarMenu>
-      <SidebarMenuItem>
-        <div className="flex flex-col gap-y-6 items-start group-data-[collapsible] :hidden bg-[#3d3d3d62] rounded-md px-2 py-3">
+      <SidebarMenuItem className="group">
+        <div className="flex flex-col gap-y-6 group-data-[collapsible=icon]:hidden items-start bg-[#3d3d3d62] rounded-md px-2 py-3">
           {!prismaUser.subscription && (
             <div className="flex flex-col items-start p-2 pb-3 gap-4 bg-background-80 ">
               <div className="flex flex-col items-start gap-1">
