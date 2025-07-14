@@ -7,7 +7,7 @@ import React from "react";
 const NewProjectButoon = ({ user }) => {
   const router = useRouter();
   return (
-    <Button className="cursor-pointer" disable={!user.subcrption}>
+    <Button className="cursor-pointer">
       <Plus></Plus>
       New Project
     </Button>

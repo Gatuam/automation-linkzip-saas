@@ -1,17 +1,25 @@
 import React from "react";
 import { getAllProject } from "@/actions/project";
+import NotFound from "@/components/global/notFound/NotFound";
+import ProjectCard from "@/components/global/project/project-card/ProjectCard";
 const DashboardPage = async () => {
   const AllProject = await getAllProject();
   return (
-    <div className="flex w-full gap-6 relative ">
-      <div className="flex flex-col items-start w-full gap-6 sm:flex-row sm:jsutify-between sm:items-center ">
-        <div className="flex flex-col items-start">
-          <h1 className="text-2xl font-semibold dark:text-primary">Projects</h1>
-          <p className="text-sm font-normal dark:text-primary backdrop:blur-lg">
-            All of your work in one place
-          </p>
+    <div>
+      <div className="flex w-full gap-6 relative p-2 mt-2 ">
+        <div className="flex flex-col items-start w-full sm:flex-row sm:jsutify-between sm:items-center ">
+          <div className="flex flex-col items-start">
+            <h1 className="text-2xl font-semibold dark:text-primary">
+              Projects
+            </h1>
+            <p className="text-sm font-normal dark:text-primary backdrop:blur-lg">
+              All of your work in one place
+            </p>
+          </div>
         </div>
       </div>
+      {AllProject && <ProjectCard></ProjectCard>}
+      {!AllProject && <NotFound></NotFound>}
     </div>
   );
 };
