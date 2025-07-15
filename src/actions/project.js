@@ -122,7 +122,7 @@ export const deleteProject = async (projectId) => {
         error: "USer not authenticated",
       };
     }
-    const deleteProject = await prisma.project.delete({
+    const deleteProject = await prisma.project.update({
       where: {
         id: projectId,
       },

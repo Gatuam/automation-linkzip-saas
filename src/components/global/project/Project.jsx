@@ -20,10 +20,7 @@ const Project = ({ projects }) => {
           createdAt={project.createdAt.toString()}
           isDelete={project?.isDeleted}
           slideData={project?.slideData}
-          src={
-            project.thumbnail ||
-            "https://unsplash.com/photos/abstract-layered-shapes-with-a-gradient-orange-color-5q4zsTaVN4I"
-          }
+          themename={project?.themeName}
         ></ProjectCard>
       ))}
     </motion.div>

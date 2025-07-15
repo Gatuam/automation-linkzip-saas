@@ -8,18 +8,20 @@ const DashboardPage = async () => {
     <div>
       <div className="flex w-full gap-6 relative p-2 mt-2 ">
         <div className="flex flex-col items-start w-full sm:flex-row sm:jsutify-between sm:items-center ">
-          <div className="flex flex-col items-start">
+          { AllProject && <div className="flex flex-col items-start">
             <h1 className="text-2xl font-semibold dark:text-primary">
               Projects
             </h1>
             <p className="text-sm font-normal dark:text-primary backdrop:blur-lg">
               All of your work in one place
             </p>
-          </div>
+          </div>}
         </div>
       </div>
-      {AllProject && <ProjectCard></ProjectCard>}
-      {!AllProject && <NotFound></NotFound>}
+      <div className=" w-full h-190 flex justify-center items-center"> 
+      {AllProject && <NotFound></NotFound>}
+      </div>
+      
     </div>
   );
 };

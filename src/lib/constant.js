@@ -1,4 +1,11 @@
-import { Grid, HomeIcon, Settings, Trash, User2Icon } from "lucide-react";
+import {
+  Grid,
+  HomeIcon,
+  Settings,
+  Share2Icon,
+  Trash,
+  User2Icon,
+} from "lucide-react";
 
 export const data = {
   user: {
@@ -11,6 +18,11 @@ export const data = {
       title: "Home",
       url: "/dashboard",
       icon: HomeIcon,
+    },
+    {
+      title: "Share",
+      url: "/share",
+      icon: Share2Icon,
     },
     {
       title: "Template",
@@ -292,5 +304,29 @@ export const themes = [
     navbarColor: "#333333",
     sidebarColor: "#212121",
     type: "dark",
+  },
+];
+
+// Company: Link_zip
+
+export const CreatePageCard = [
+  {
+    title: "Use a",
+    highlightedText: "Template",
+    description: "Write a prompt and leave everything else for us to handle",
+    type: "template",
+  },
+  {
+    title: "Generate with",
+    highlightedText: "Creative AI",
+    description: "Write a prompt and leave everything else for us to handle",
+    type: "creative-ai",
+    highlight: true,
+  },
+  {
+    title: "Start from",
+    highlightedText: "Scratch",
+    description: "Write a prompt and leave everything else for us to handle",
+    type: "create-scratch",
   },
 ];

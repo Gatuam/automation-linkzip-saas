@@ -14,16 +14,17 @@ const NavFooter = ({ prismaUser }) => {
   return (
     <SidebarMenu>
       <SidebarMenuItem className="group">
-        <div className="flex flex-col gap-y-6 group-data-[collapsible=icon]:hidden items-start bg-[#3d3d3d62] rounded-md px-2 py-3">
-          {!prismaUser.subscription && (
+       {!prismaUser.subscription && ( <div className="flex flex-col gap-y-6 group-data-[collapsible=icon]:hidden items-start bg-[#3d3d3d62] rounded-md px-2 py-3">
+          
             <div className="flex flex-col items-start p-2 pb-3 gap-4 bg-background-80 ">
               <div className="flex flex-col items-start gap-1">
                 <p className="text-base text-[16px] font-bold">
                   Get
                   <span className="text-vivid"> Creative AI</span>
                 </p>
-                <span className="text-[13px] mt-1 font-light">
-                  Unlock all features including AI.......
+                <span className="text-[12px] mt-1 font-light tracking-tight">
+                  Unlock all features including <span className="text-vivid"> 
+                   vivid AI... </span>
                 </span>
               </div>
               <div className="flex w-full cursor-pointer">
@@ -36,8 +37,8 @@ const NavFooter = ({ prismaUser }) => {
                 </Button>
               </div>
             </div>
-          )}
-        </div>
+         
+        </div>  )}
         <SignedIn>
           <SidebarMenuButton
             size="lg"

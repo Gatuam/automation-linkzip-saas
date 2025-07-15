@@ -111,12 +111,16 @@
   --sidebar-border: oklch(11.501% 0.01052 18.742 / 0.1);
   --sidebar-ring: oklch(0.556 0 0);
 }
-.text-vivid {
-  background: linear-gradient(180deg, #f55c7a 0%, #f6bc66 100%);
+.text-vivid{
+  background: linear-gradient(90deg, #8e5eff 0%, #00c6ff 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.bg-vivid-gradient {
+  background: linear-gradient(90deg, #8e5eff 0%, #00c6ff 100%);
+}
+
 
 @layer base {
   * {

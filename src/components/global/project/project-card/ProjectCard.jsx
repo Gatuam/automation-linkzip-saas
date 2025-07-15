@@ -17,7 +17,6 @@ const ProjectCard = ({
   createdAt,
   isDelete,
   slideData,
-  src,
 }) => {
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
@@ -134,7 +133,7 @@ const ProjectCard = ({
                   <Button
                     size="sm"
                     variant="ghost"
-                    className={"bg-[#fd4b4bc2] dark:hover:bg-[#9e5656]"}
+                    className={"bg-[#a8a8a8c2] dark:hover:bg-[#5f5f5f]"}
                   >
                     Delete
                   </Button>

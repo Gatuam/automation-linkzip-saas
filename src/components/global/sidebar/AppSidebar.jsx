@@ -29,7 +29,7 @@ const AppSidebar = ({ recentProjects, user, ...props }) => {
             <div className=" flex aspect-square size-7 items-center justify-center rounded-lg text-sidebar-primary-foreground ">
               <Dna />
             </div>
-            <span className="text-primary text-xl font-semibold">LINK-ZIP</span>
+            <span className=" text-xl font-semibold">LINK-ZIP</span>
           </SidebarMenuButton>
         </SidebarHeader>
         <SidebarContent className=" mt-10 gap-y-6 ">

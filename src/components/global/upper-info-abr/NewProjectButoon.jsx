@@ -7,7 +7,11 @@ import React from "react";
 const NewProjectButoon = ({ user }) => {
   const router = useRouter();
   return (
-    <Button className="cursor-pointer">
+    <Button
+      size={"sm"}
+      onClick={() => router.push("/create-page")}
+      className="cursor-pointer"
+    >
       <Plus></Plus>
       New Project
     </Button>
