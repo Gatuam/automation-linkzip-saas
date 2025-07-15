@@ -6,8 +6,8 @@ import {
   SignedIn,
   SignedOut,
   UserButton,
-} from '@clerk/nextjs'
-import { dark } from '@clerk/themes'
+} from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
@@ -31,12 +31,10 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider
       appearance={{
-        baseTheme: dark
+        baseTheme: dark,
       }}
     >
-      <html lang="en"
-        suppressHydrationWarning={true}
-      >
+      <html lang="en" suppressHydrationWarning={true}>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
@@ -52,6 +50,5 @@ export default function RootLayout({ children }) {
         </body>
       </html>
     </ClerkProvider>
-
   );
 }

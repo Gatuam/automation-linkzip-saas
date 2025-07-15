@@ -6,7 +6,7 @@ const ThumnailPreview = ({ slide, theme }) => {
   return (
     <div
       className={cn(
-        "w-full relative aspect-[16/9] rounded-lg overflow-hidden transition-all duration-150 p-2 "
+        "w-full relative aspect-[16/9] rounded-sm overflow-hidden transition-all duration-150 p-2 "
       )}
       style={{
         fontFamily: theme.fontFamily,
@@ -19,9 +19,8 @@ const ThumnailPreview = ({ slide, theme }) => {
         <div className="scale-[0.5] origin-bottom-left w-[200%] h-[200%] overflow-hidden "></div>
       )}
       {!slide && (
-        <div className="w-full h-full bg-gray-300 flex justify-center items-center">
+        <div className="w-full h-full bg-gray-900 flex justify-center items-center rounded-lg">
           <ImageIcon className="w-6 h-6 text-gray-500" />
-          wtf
         </div>
       )}
     </div>
